@@ -1,0 +1,5 @@
+data/*
+output/PersonalWAB/SrcRunner/*
+!data/.gitkeep
+!output/PersonalWAB/SrcRunner/.gitkeep
+__pycache__
