@@ -41,11 +41,11 @@ def parse_global_args(parser: argparse.ArgumentParser):
                         help='0: Pad right; 1: Pad left')
     parser.add_argument('--user_get_all_his_unisar', type=int, default=0,
                         help='Follow the unisar process, using timestamp to sort various behavioral interactions; 0: Do not use; 1: Use')
-    # only for LenovoCS
+    # only for Commercial
     parser.add_argument('--src_negs_from', type=str, 
                         choices=['all','train_exposed','train_val_test_exposed','val_test_exposed'],
                         default='all',
-                        help='In search data, whether to construct training or inference data using exposed negatives, or neither; default is neither, only for LenovoCS')
+                        help='In search data, whether to construct training or inference data using exposed negatives, or neither; default is neither, only for Commercial')
     # only for PersonalWAB
     parser.add_argument('--preSampleNeg4Infer', type=int, default=0,
                         help='Whether to use pre-sampled negatives as candidate items for inference, only for PersonalWAB')
@@ -84,7 +84,7 @@ def parse_global_args(parser: argparse.ArgumentParser):
     parser.add_argument('--InfoNCE_kw2item_alpha', type=float, default=0.0,
                         help='The proportion of keyword-to-item contrastive learning in the total loss, ranging from 0 to 1; 0 means not using this contrastive learning')
     parser.add_argument('--kw_items_file_name', type=str, default='kw_items_original.pkl', 
-                        choices=['kw_items_original.pkl','kw_items_onlyChinese.pkl', # for LenovoCS
+                        choices=['kw_items_original.pkl','kw_items_onlyChinese.pkl', # for Commercial
                                 'src_inv_index_v2.pkl','rec_inv_index_v2.pkl', # for PersonalWAB
                                 'all_inv_index_v2.pkl','src_inv_index_v3.pkl', # for PersonalWAB
                                 'rec_inv_index.pkl','src_inv_index.pkl','src_inv_index_v4.pkl','src_inv_index_v5.pkl',
@@ -234,7 +234,7 @@ if __name__ == '__main__':
     # Process and prepare all textual data to obtain the vocabulary tensor on the device.
     if 'PersonalWAB' in args.data:
         const.process_text_data_en(args)
-    elif "LenovoCS" in args.data:
+    elif "Commercial" in args.data:
         const.process_text_data(args)   
     else:
         raise ValueError

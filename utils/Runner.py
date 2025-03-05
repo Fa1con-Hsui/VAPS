@@ -35,7 +35,7 @@ class BaseRunner(object):
             help='num neg samples for each pos sample during training')
         parser.add_argument('--data',
                             type=str,
-                            default='LenovoCS_August_v0',
+                            default='Commercial_August_v0',
                             help='Choose a dataset.')
 
         parser.add_argument('--epoch',

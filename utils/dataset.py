@@ -194,7 +194,7 @@ class KwItemInfoNCEDataset(BaseDataSet):
         self.token_ids_2_item_ids = {
             tuple(self._convert_kw_to_ids(kw)):v for kw,v in self.kw2items.items()}
       
-        self.data_list = [] # LenovoCS_August_v0 len: 31133
+        self.data_list = [] # Commercial_August_v0 len: 31133
         for token_ids_tuple, item_list in self.token_ids_2_item_ids.items():
             for item_id in item_list:
                 self.data_list.append((token_ids_tuple,item_id))
