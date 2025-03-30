@@ -1,39 +1,69 @@
-# UniSAR: Modeling User Transition Behaviors between Search and Recommendation
-This is the official implementation of the paper "UniSAR: Modeling User Transition Behaviors between Search and Recommendation" based on PyTorch.
+
+
+
+# MAPS: Motivation-Aware Personalized Search via LLM-Driven Consultation Alignment
+
+
+This is the official implementation of the paper "MAPS: Motivation-Aware Personalized Search via LLM-Driven Consultation Alignment" based on PyTorch. Please note that the code of this project is still being organized, and the methods are continuously being improved.
 
 
 ## Overview
 
-The main implementation of UniSAR can be found in the file `models/UniSAR.py`. 
-
+The main implementation of MAPS can be found in the file `models/cs/TEM_0206_Final.py`.
 
 ## Experimental Setting
-All the hyper-parameter settings of UniSAR on both datasets can be found in files `config/UniSAR_KuaiSAR.yaml` and `config/UniSAR_Amazon.yaml`.
-The settings of two datasets can be found in file `utils/const.py`.
+The settings of can be found in file `utils/const.py`.
 
 
 ## Quick Start
 
 ### 1. Download data
-Download and unzip the processed data [Amazon](https://drive.google.com/file/d/1_YHVR7MfS9iJtcdmY75riNCZFY39fFLh/view?usp=drive_link) and [KuaiSAR](https://drive.google.com/file/d/1AgCl3Jd7UxJjGCOvUfx1Yf3SODUpyXiT/view?usp=drive_link). Place data files in the folder `data`.
+Download and unzip the processed data [Amazon](https://pan.baidu.com/s/1mXzVD8tjeD0wyOS879xGWA?pwd=3rbm). Place data files in the folder `data`.
 
 ### 2. Satisfy the requirements
 The requirements can be found in file `requirements.txt`.
 
 ### 3. Train and evaluate our model:
-Run codes in command line:
-```bash
-python3 main.py --model UniSAR --data KuaiSAR
-```
+Refer to the example in `GO.sh` and customize your hyperparameters and command.
 
 ### 4. Check training and evaluation process:
-After training, check log files, for example, `output/KuaiSAR/logs/time.log`.
+After training, check `./output` for logs and results. For the sake of convenience, you can utilize `results_to_excel.ipynb` to present the performances of all experiments in the form of an excel table.
 
 
-## Environments
+## Reference
 
-We conducted the experiments based on the following environments:
-* CUDA Version: 11.4
-* OS: CentOS Linux release 7.4.1708 (Core)
-* GPU: The NVIDIA® 3090 GPU
-* CPU: Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+If you find it useful, please consider citing our paper and giving a star :)
+
+```bibtex
+@misc{qin2025mapsmotivationawarepersonalizedsearch,
+      title={MAPS: Motivation-Aware Personalized Search via LLM-Driven Consultation Alignment}, 
+      author={Weicong Qin and Yi Xu and Weijie Yu and Chenglei Shen and Ming He and Jianping Fan and Xiao Zhang and Jun Xu},
+      year={2025},
+      eprint={2503.01711},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR},
+      url={https://arxiv.org/abs/2503.01711}, 
+}
+```
+
+
+## License
+
+This project is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License.
+
+The open-source dataset used in this project is derived from the Amazon data processed by [PersonalWAB](https://github.com/HongruCai/PersonalWAB). We make modifications to it to meet the requirements of this project. Thus, we also we continue to honor and adhere to its licensing terms ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)). Finally, we would like to express our sincere gratitude for open-source contributions of [PersonalWAB](https://github.com/HongruCai/PersonalWAB).
+
+```bibtex
+@misc{cai2024personalwab,
+      title={Large Language Models Empowered Personalized Web Agents}, 
+      author={Hongru Cai and Yongqi Li and Wenjie Wang and Fengbin Zhu and Xiaoyu Shen and Wenjie Li and Tat-Seng Chua},
+      year={2024},
+      eprint={2410.17236},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2410.17236}, 
+}
+```
+
+
+
