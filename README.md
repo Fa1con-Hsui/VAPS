@@ -1,51 +1,25 @@
 
 
 
-# MAPS: Motivation-Aware Personalized Search via LLM-Driven Consultation Alignment
+# Similarity = Value? Consultation Value-Assessment and Alignment for Personalized Search
 
 
-This is the official implementation of the paper "MAPS: Motivation-Aware Personalized Search via LLM-Driven Consultation Alignment" based on PyTorch. Please note that the code of this project is still being organized, and the methods are continuously being improved.
+This is the official implementation of the paper "Similarity = Value? Consultation Value-Assessment and Alignment for Personalized Search" based on PyTorch. Please note that the code of this project is still being organized, and the methods are continuously being improved.
 
 
 ## Overview
 
-The main implementation of MAPS can be found in the file `models/cs/TEM_0206_Final.py`.
+Code will be public soon.
 
 ## Experimental Setting
-The settings of can be found in file `utils/const.py`.
+
+Setting will be public soon.
 
 
 ## Quick Start
 
 ### 1. Download data
 Download and unzip the processed data [Amazon](https://pan.baidu.com/s/1mXzVD8tjeD0wyOS879xGWA?pwd=3rbm). Place data files in the folder `data`.
-
-### 2. Satisfy the requirements
-The requirements can be found in file `requirements.txt`.
-
-### 3. Train and evaluate our model:
-Refer to the example in `GO.sh` and customize your hyperparameters and command.
-
-### 4. Check training and evaluation process:
-After training, check `./output` for logs and results. For the sake of convenience, you can utilize `results_to_excel.ipynb` to present the performances of all experiments in the form of an excel table.
-
-
-## Reference
-
-If you find it useful, please consider citing our paper and giving a star :)
-
-```bibtex
-@misc{qin2025mapsmotivationawarepersonalizedsearch,
-      title={MAPS: Motivation-Aware Personalized Search via LLM-Driven Consultation Alignment}, 
-      author={Weicong Qin and Yi Xu and Weijie Yu and Chenglei Shen and Ming He and Jianping Fan and Xiao Zhang and Jun Xu},
-      year={2025},
-      eprint={2503.01711},
-      archivePrefix={arXiv},
-      primaryClass={cs.IR},
-      url={https://arxiv.org/abs/2503.01711}, 
-}
-```
-
 
 ## License
 
